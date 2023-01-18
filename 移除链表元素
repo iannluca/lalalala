@@ -1,0 +1,32 @@
+题意：删除链表中等于给定值 val 的所有节点。
+
+class Solution {
+public:
+    //在原始链表上进行操作
+    ListNode* removeElements(ListNode* head, int val) {
+    while(head!=NULL&&head->val == val)//移除头节点
+    {
+      listnode *tmp = head;
+      head = head->next;
+      delete tmp;
+    }
+    
+    listnode *cur = head;
+    while(cur != NULL&&cur->next!=NULL)
+    {
+      if(cur->next->val == val)
+      {
+        listnode *tmp = cur-next;
+        cur-next = cur->next->next;
+        delete cur;
+      }
+    }
+    return head;
+};
+
+class Solution {
+public:
+//设置虚拟头节点进行操作
+    ListNode* removeElements(ListNode* head, int val) {
+  
+  };
