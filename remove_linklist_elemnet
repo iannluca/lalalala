@@ -3,7 +3,8 @@
 class Solution {
 public:
     //在原始链表上进行操作
-    ListNode* removeElements(ListNode* head, int val) {
+    ListNode* removeElements(ListNode* head, int val) 
+{
     while(head!=NULL&&head->val == val)//移除头节点
     {
       listnode *tmp = head;
@@ -24,9 +25,3 @@ public:
     return head;
 };
 
-class Solution {
-public:
-//设置虚拟头节点进行操作
-    ListNode* removeElements(ListNode* head, int val) {
-  
-  };
