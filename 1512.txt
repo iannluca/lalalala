@@ -2,6 +2,7 @@ class Solution {
 public:
     int numIdenticalPairs(vector<int>& nums) {
         int ans = 0;
+	//unordered_map<int,int> cnt 定义哈希表
         unordered_map<int,int> cnt;
         for(int x:nums){
            ans += cnt[x];
@@ -10,3 +11,6 @@ public:
         return ans;
     }
 };
+
+
+注意使用哈希表 存储x左边 与x相同元素的个数
